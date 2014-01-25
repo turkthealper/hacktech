@@ -99,14 +99,6 @@ public class MainActivity extends Activity {
 			for(int i = 0; i < n; i++){
 				JSONObject id = jsons.getJSONObject(i);
 				vals.add(id.getString("u'_id'"));
-				/*Iterator<?> keys = id.keys();
-		        while( keys.hasNext() ){
-		            String key = (String)keys.next();
-		            Log.d("check", key);
-		            if( id.get(key) instanceof JSONObject ){
-		            	//Log.d("check", key);
-		            }
-		        }*/
 			}
 			Log.d("yay2", result);
 			}
