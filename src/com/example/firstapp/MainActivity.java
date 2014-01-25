@@ -2,6 +2,7 @@ package com.example.firstapp;
 
 import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
 
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
@@ -16,7 +17,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.database.CursorJoiner.Result;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -72,20 +75,26 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 	
-	public class Access extends AsyncTask {
+	public static class Access extends AsyncTask {
 		@Override
 		protected Object doInBackground(Object... urls) {
+			String site = "http://warm-ridge-1785.herokuapp.com/";
 			HttpClient httpclient = new DefaultHttpClient();  
-			HttpGet request = new HttpGet( (String) urls[0] + (String) urls[1]);
+			HttpGet request = new HttpGet( site + (String) urls[0]);
 			ResponseHandler<String> handler = new BasicResponseHandler();
 			String result = "";
 			try {
 				result = httpclient.execute(request, handler);
-			} catch (Exception e) {
-				Log.d("error5", e.toString());
-				return null;
-			} 
 			Log.d("yay", result);
+			ArrayList<String> vals = (ArrayList<String>) urls[1];
+			vals.add("AAA");
+			vals.add("BBB");
+			vals.add("CCC");
+			vals.add("DDD");}
+			 catch (Exception e) {
+					Log.d("error5", e.toString());
+					return null;
+				} 
 			httpclient.getConnectionManager().shutdown();
 			return null;
 		}
@@ -94,8 +103,7 @@ public class MainActivity extends Activity {
 	public void sendserver(View view){
 		EditText editText = (EditText) findViewById(R.id.edit_message);
 		String message = editText.getText().toString();
-		String site = "http://warm-ridge-1785.herokuapp.com/login";
-		new Access().execute(site, message);
+		new Access().execute(message);
 				//JSONObject obj = new JSONObject();
 				//try {
 				//	obj.put("info", message);
