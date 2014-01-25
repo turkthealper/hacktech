@@ -1,13 +1,17 @@
 package com.example.firstapp;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.ByteArrayOutputStream;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
@@ -43,8 +47,33 @@ public class Camera extends Activity {
 	        Bitmap imageBitmap = (Bitmap) extras.get("data");
 	        ImageView im = (ImageView) findViewById(R.id.result);
 	        im.setImageBitmap(imageBitmap);
+	        String encodedImage = getStringFromBitmap(imageBitmap);
+	        JSONObject output;
+	        output = new JSONObject();
+	        try {
+				output.put("userid", 1);
+				output.put("lat", 1);
+				output.put("lng", 1);
+				output.put("recepients", new int[]{2});
+				output.put("image", encodedImage);
+				output.put("comment", "Beautiful");
+				AsyncTask t = new MainActivity.Access();
+				t.execute("addDrop", output);
+			} 
+	        catch (JSONException e) { e.printStackTrace(); }
 	    }
 	}
+	
+	private String getStringFromBitmap(Bitmap bitmapPicture) {
+		 final int COMPRESSION_QUALITY = 100;
+		 String encodedImage;
+		 ByteArrayOutputStream byteArrayBitmapStream = new ByteArrayOutputStream();
+		 bitmapPicture.compress(Bitmap.CompressFormat.PNG, COMPRESSION_QUALITY,
+		 byteArrayBitmapStream);
+		 byte[] b = byteArrayBitmapStream.toByteArray();
+		 encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
+		 return encodedImage;
+		 }
 	
 	
 	

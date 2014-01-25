@@ -87,12 +87,15 @@ public class MainActivity extends Activity {
 		protected Object doInBackground(Object... urls) {
 			String site = "http://warm-ridge-1785.herokuapp.com/";
 			HttpClient httpclient = new DefaultHttpClient();  
-			HttpGet request = new HttpGet( site + (String) urls[0]);
-			ResponseHandler<String> handler = new BasicResponseHandler();
-			String result = "";
+			HttpPost request = new HttpPost( site + (String) urls[0]);
+			//ResponseHandler<String> handler = new BasicResponseHandler();
+			HttpResponse result;
 			try {
-				result = httpclient.execute(request, handler);
-			Log.d("yay", result);
+				StringEntity s = new StringEntity(urls[1].toString());
+		        request.setEntity(s);
+		        request.addHeader("accept", "application/json");
+				result = httpclient.execute(request);//, handler);
+			/*Log.d("yay", result);
 			ArrayList<String> vals = (ArrayList<String>) urls[1];
 			JSONArray jsons = new JSONArray(result);
 			int n = jsons.length();
@@ -100,12 +103,13 @@ public class MainActivity extends Activity {
 				JSONObject id = jsons.getJSONObject(i);
 				vals.add(id.getString("u'_id'"));
 			}
-			Log.d("yay2", result);
+			Log.d("yay2", result);*/
 			}
 			 catch (Exception e) {
 					Log.d("error5", e.toString());
 					return null;
-				} 
+			} 
+			Log.d("done", result.toString());
 			httpclient.getConnectionManager().shutdown();
 			return null;
 		}
