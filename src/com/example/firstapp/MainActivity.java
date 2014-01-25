@@ -60,14 +60,18 @@ public class MainActivity extends Activity {
 	public void goLogin(View view) {
 	    // Do something in response to button
 		Intent intent = new Intent(this, Login.class);
-
 		startActivity(intent);
 	}
 	
 	public void gps(View view) {
 	    // Do something in response to button
 		Intent intent = new Intent(this, Gps.class);
-
+		startActivity(intent);
+	}
+	
+	public void camera(View view) {
+	    // Do something in response to button
+		Intent intent = new Intent(this, Camera.class);
 		startActivity(intent);
 	}
 	
