@@ -27,6 +27,7 @@ public class NewsFeed extends Activity {
 		String command = "getDrops?lat=1&lng=4&num=2";
 		ArrayList<String> vals = new ArrayList<String>();
 		AsyncTask t = new MainActivity.Access();
+		//this puts what values should be in the newsfeed into vals
 		t.execute(command, vals);
 		try {
 			t.get();

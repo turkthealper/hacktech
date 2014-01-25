@@ -3,6 +3,7 @@ package com.example.firstapp;
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
@@ -13,6 +14,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -77,6 +79,7 @@ public class MainActivity extends Activity {
 	
 	public static class Access extends AsyncTask {
 		@Override
+		//This i where i get json objects from the server
 		protected Object doInBackground(Object... urls) {
 			String site = "http://warm-ridge-1785.herokuapp.com/";
 			HttpClient httpclient = new DefaultHttpClient();  
@@ -87,10 +90,22 @@ public class MainActivity extends Activity {
 				result = httpclient.execute(request, handler);
 			Log.d("yay", result);
 			ArrayList<String> vals = (ArrayList<String>) urls[1];
-			vals.add("AAA");
-			vals.add("BBB");
-			vals.add("CCC");
-			vals.add("DDD");}
+			JSONArray jsons = new JSONArray(result);
+			int n = jsons.length();
+			for(int i = 0; i < n; i++){
+				JSONObject id = jsons.getJSONObject(i);
+				vals.add(id.getString("u'_id'"));
+				/*Iterator<?> keys = id.keys();
+		        while( keys.hasNext() ){
+		            String key = (String)keys.next();
+		            Log.d("check", key);
+		            if( id.get(key) instanceof JSONObject ){
+		            	//Log.d("check", key);
+		            }
+		        }*/
+			}
+			Log.d("yay2", result);
+			}
 			 catch (Exception e) {
 					Log.d("error5", e.toString());
 					return null;
@@ -101,29 +116,9 @@ public class MainActivity extends Activity {
 		
 	}
 	public void sendserver(View view){
+		//forget this its old
 		EditText editText = (EditText) findViewById(R.id.edit_message);
 		String message = editText.getText().toString();
 		new Access().execute(message);
-				//JSONObject obj = new JSONObject();
-				//try {
-				//	obj.put("info", message);
-		//} catch (JSONException e1) {
-		//	Log.d("1" , "error1");
-		//	return;
-		//}
-        //StringEntity s;
-		//try {
-			//s = new StringEntity(obj.toString());
-			//s.setContentEncoding("UTF-8");
-	        //s.setContentType("application/json");
-		//} catch (UnsupportedEncodingException e1) {
-		//	Log.d("2" , "error2");
-		//	return;
-		//}
-        //request.setEntity(s);
-        //JSONObject jsonObj;
-
-            
-            //jsonObj = new JSONObject(result);
 	}
 }
