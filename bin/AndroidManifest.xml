@@ -48,6 +48,10 @@
             android:name="com.example.firstapp.Gps"
             android:label="@string/title_activity_gps" >
         </activity>
+        <activity
+            android:name="com.example.firstapp.NewsFeed"
+            android:label="@string/title_activity_news_feed" >
+        </activity>
     </application>
 
 </manifest>

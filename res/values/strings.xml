@@ -12,7 +12,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="button_login">Login!</string>
     <string name="title_activity_login">Login</string>
+    <string name="title_activity_gps">gps</string>
     <string name="gps">gps</string>
-    <string name="title_activity_gps">Gps</string>
+    <string name="news">news</string>
+    <string name="title_activity_news_feed">NewsFeed</string>
 
 </resources>

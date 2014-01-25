@@ -66,6 +66,12 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 	
+	public void newsfeed(View view) {
+	    // Do something in response to button
+		Intent intent = new Intent(this, NewsFeed.class);
+		startActivity(intent);
+	}
+	
 	public class Access extends AsyncTask {
 		@Override
 		protected Object doInBackground(Object... urls) {
@@ -107,14 +113,9 @@ public class MainActivity extends Activity {
 		//	return;
 		//}
         //request.setEntity(s);
-				//ResponseHandler<String> handler = new BasicResponseHandler();
-				//String result;
         //JSONObject jsonObj;
 
             
             //jsonObj = new JSONObject(result);
-        
-        //Log.d("xx", result);
-        //httpclient.getConnectionManager().shutdown();	
 	}
 }
