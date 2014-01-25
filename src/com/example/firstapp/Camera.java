@@ -5,15 +5,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
 import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -56,11 +61,12 @@ public class Camera extends Activity {
 				output.put("lng", 1);
 				output.put("recepients", new int[]{2});
 				output.put("image", encodedImage);
-				output.put("comment", "Beautiful");
+				output.put("comment", alert());
 				AsyncTask t = new MainActivity.Access();
 				t.execute("addDrop", output);
+				t.get();
 			} 
-	        catch (JSONException e) { e.printStackTrace(); }
+	        catch (Exception e) { e.printStackTrace(); }
 	    }
 	}
 	
@@ -74,6 +80,22 @@ public class Camera extends Activity {
 		 encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
 		 return encodedImage;
 		 }
+	
+	public String alert(){
+		AlertDialog.Builder alert = new AlertDialog.Builder(this);
+		alert.setTitle("Bro");
+		alert.setMessage("Enter your comment dude");
+		final EditText input = new EditText(this);
+		alert.setView(input);
+		alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int whichButton) {
+				String value = input.getText().toString();
+				Log.d("out1", value);
+			}
+		});
+		alert.show();
+		return input.getText().toString();
+	}
 	
 	
 	
