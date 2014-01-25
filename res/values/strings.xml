@@ -10,5 +10,9 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">DisplayMessageActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="button_login">Login!</string>
+    <string name="title_activity_login">Login</string>
+    <string name="gps">gps</string>
+    <string name="title_activity_gps">Gps</string>
 
 </resources>

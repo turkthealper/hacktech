@@ -19,4 +19,14 @@
         android:layout_height="wrap_content"
         android:text="@string/button_do"
         android:onClick="sendserver" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_login"
+        android:onClick="goLogin" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gps"
+        android:onClick="gps" />
 </LinearLayout>

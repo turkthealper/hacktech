@@ -51,6 +51,21 @@ public class MainActivity extends Activity {
 		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity(intent);
 	}
+	
+	public void goLogin(View view) {
+	    // Do something in response to button
+		Intent intent = new Intent(this, Login.class);
+
+		startActivity(intent);
+	}
+	
+	public void gps(View view) {
+	    // Do something in response to button
+		Intent intent = new Intent(this, Gps.class);
+
+		startActivity(intent);
+	}
+	
 	public class Access extends AsyncTask {
 		@Override
 		protected Object doInBackground(Object... urls) {
