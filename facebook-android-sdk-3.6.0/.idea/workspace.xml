@@ -1,58 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a8f4036-d805-4ef7-8387-10537f0fb2f2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/com/example/firstapp/GlobalState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../src/com/example/firstapp/NotificationHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/libraries/Parse_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/RPSSample/build/source/buildConfig/buildConfig.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/ProfilePictureSample/build/source/buildConfig/buildConfig1.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/GraphApiSample/build/source/buildConfig/buildConfig2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/SwitchUserSample/build/source/buildConfig/buildConfig3.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/HelloFacebookSample/build/source/buildConfig/buildConfig4.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/Scrumptious/build/source/buildConfig/buildConfig5.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/FriendPickerSample/build/source/buildConfig/buildConfig6.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/build/source/buildConfig/buildConfig7.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/PlacePickerSample/build/source/buildConfig/buildConfig8.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/SessionLoginSample/build/source/buildConfig/buildConfig9.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook-android-sdk-3.6.0.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.idea/libraries/gradle_wrapper1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/build/source/r/r.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/HelloFacebookSample/build/source/r/r1.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/ProfilePictureSample/build/source/r/r2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/PlacePickerSample/build/source/r/r3.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/RPSSample/build/source/r/r4.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/Scrumptious/build/source/r/r5.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/SessionLoginSample/build/source/r/r6.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/FriendPickerSample/build/source/r/r7.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/SwitchUserSample/build/source/r/r8.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/GraphApiSample/build/source/r/r9.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_13_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/android_support_v4.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../AndroidManifest.xml" afterPath="$PROJECT_DIR$/../AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/FriendPickerSample/FriendPickerSample.iml" afterPath="$PROJECT_DIR$/samples/FriendPickerSample/FriendPickerSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/GraphApiSample/GraphApiSample.iml" afterPath="$PROJECT_DIR$/samples/GraphApiSample/GraphApiSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/HelloFacebookSample/HelloFacebookSample.iml" afterPath="$PROJECT_DIR$/samples/HelloFacebookSample/HelloFacebookSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../src/com/example/firstapp/NewsFeed.java" afterPath="$PROJECT_DIR$/../src/com/example/firstapp/NewsFeed.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/PlacePickerSample/PlacePickerSample.iml" afterPath="$PROJECT_DIR$/samples/PlacePickerSample/PlacePickerSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/ProfilePictureSample/ProfilePictureSample.iml" afterPath="$PROJECT_DIR$/samples/ProfilePictureSample/ProfilePictureSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/RPSSample/RPSSample.iml" afterPath="$PROJECT_DIR$/samples/RPSSample/RPSSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/Scrumptious/Scrumptious.iml" afterPath="$PROJECT_DIR$/samples/Scrumptious/Scrumptious.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/SessionLoginSample/SessionLoginSample.iml" afterPath="$PROJECT_DIR$/samples/SessionLoginSample/SessionLoginSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/SwitchUserSample/SwitchUserSample.iml" afterPath="$PROJECT_DIR$/samples/SwitchUserSample/SwitchUserSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/libraries/android_support_v41.xml" afterPath="$PROJECT_DIR$/../.idea/libraries/android_support_v41.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/facebook.iml" afterPath="$PROJECT_DIR$/facebook/facebook.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../hacktech.iml" afterPath="$PROJECT_DIR$/../hacktech.iml" />
-    </list>
+    <list default="true" id="1a8f4036-d805-4ef7-8387-10537f0fb2f2" name="Default" comment="" />
     <ignored path="facebook-android-sdk-3.6.0.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
