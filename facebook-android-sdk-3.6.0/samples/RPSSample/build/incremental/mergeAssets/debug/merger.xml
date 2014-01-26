@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="FacebookAndroidSdk360FacebookUnspecified.aar" >
+        <source path="/Users/prithvirajpandian/Android/studioProjects/hacktech/hacktech/facebook-android-sdk-3.6.0/samples/RPSSample/build/exploded-bundles/FacebookAndroidSdk360FacebookUnspecified.aar/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/prithvirajpandian/Android/studioProjects/hacktech/hacktech/facebook-android-sdk-3.6.0/samples/RPSSample/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/prithvirajpandian/Android/studioProjects/hacktech/hacktech/facebook-android-sdk-3.6.0/samples/RPSSample/src/debug/assets" />
+    </dataSet>
+
+</merger>
